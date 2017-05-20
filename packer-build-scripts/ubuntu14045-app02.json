@@ -1,6 +1,6 @@
 {
     "builders": [{
-        "name": "ubuntu-app01-14045-server",
+        "name": "ubuntu-app02-14045-server",
         "type": "virtualbox-iso",
         "guest_os_type": "Ubuntu_64",
         "guest_additions_mode": "disable",
@@ -17,7 +17,7 @@
         "ssh_pty": "true", 
         "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
 		"post_shutdown_delay": "30s",		
-        "vm_name": "ubuntu-app01-14045-server",
+        "vm_name": "ubuntu-app02-14045-server",
         "hard_drive_interface": "sata",
         "disk_size": 20000,
         "boot_wait": "5s",
@@ -26,7 +26,7 @@
             "/install/vmlinuz noapic ",
             "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed/preseed.cfg ",
             "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
-            "hostname=pleasechangeme ",
+            "hostname=app02 ",
             "fb=false debconf/frontend=noninteractive ",
             "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA ",
             "keyboard-configuration/variant=USA console-setup/ask_detect=false ",
@@ -47,7 +47,7 @@
   {
     "type": "shell",
   "execute_command" : "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'", 
-    "script": "../scripts/post_install_vagrant_app01.sh"
+    "script": "../scripts/post_install_vagrant_app02.sh"
   }
 ],
   "post-processors": [

@@ -24,7 +24,8 @@ cd /data
 rm -fr *
 #Getting master host file.
 sudo wget https://raw.githubusercontent.com/anandmohnish/ansible/master/packer-build-scripts/data/hostfilemaster
-cat hostfilemaster >hosts
+cat /etc/hosts >hosts
+cat hostfilemaster >>hosts
 sudo mv /etc/hosts /etc/hosts.backup
 sudo cp /data/hosts /etc/hosts
 sudo chown root:root /etc/hosts
