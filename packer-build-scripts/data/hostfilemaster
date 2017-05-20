@@ -1,0 +1,26 @@
+127.0.0.1       localhost
+127.0.1.1       ansiblecm
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+192.168.1.100   riemanna
+192.168.1.101   riemannb
+792.168.1.102   riemannmc
+192.168.1.104   graphitea
+192.168.1.105   graphiteb
+192.168.1.106   graphitemc
+
+#ELK Stack
+192.168.1.145   logstasha logstasha.example.com
+192.168.1.146   esa1 esa1.example.com
+192.168.1.147   esa2 esa2.example.com
+
+#Ansible Stack Machines
+
+192.168.1.110   ansbilecm
+192.168.1.111   lb01
+192.168.1.112   app01
+192.168.1.113   app02
+192.168.1.114   db01
